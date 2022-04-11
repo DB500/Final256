@@ -1,1 +1,7 @@
-<p>login works!</p>
+<h1>Login</h1>
+<p style="color: red">{{message}}</p>
+<form>
+  User ID: <input [(ngModel)]="userID" name="userId" type="text">
+  Password: <input [(ngModel)]="password" name="password" type="password">
+  <button (click)="signIn()">Sign in</button>
+</form>
