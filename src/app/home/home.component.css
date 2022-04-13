@@ -1,0 +1,23 @@
+body {
+  background-image: url("https://i.etsystatic.com/11933806/r/il/604edc/2559688522/il_794xN.2559688522_kxvc.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+h1 {
+  font-family: "Book Antiqua";
+  color: crimson;
+}
+h2 {
+  font-family: "Book Antiqua";
+  color: crimson;
+}
+p {
+  font-family: "Book Antiqua";
+  color:crimson;
+}
+footer {
+  font-family: "Book Antiqua";
+  font-size: large;
+  color: crimson;
+}

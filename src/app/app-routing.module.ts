@@ -13,6 +13,8 @@ import {Tool8Component} from "./tool8/tool8.component";
 import {Tool9Component} from "./tool9/tool9.component";
 import {Tool10Component} from "./tool10/tool10.component";
 import {HomeComponent} from "./home/home.component";
+import {AboutComponent} from "./about/about.component";
+import {ShoppingcartComponent} from "./shoppingcart/shoppingcart.component";
 
 
 export const routes: Routes = [
@@ -28,7 +30,9 @@ export const routes: Routes = [
   {path: 'tool8', component: Tool8Component},
   {path: 'tool9', component: Tool9Component},
   {path: 'tool10', component: Tool10Component},
-  {path: '', component: HomeComponent}
+  {path: '', component: HomeComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'shoppingcart', component: ShoppingcartComponent}
 
 ];
 

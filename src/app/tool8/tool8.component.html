@@ -12,8 +12,8 @@
       <h2>Options</h2>
       <div class="quantity buttons_added">
         Quantity:
-        <input type="number" #quantity id="quantity" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
-        <button class="btn btn-primary" type="submit">Update Price</button>
+        <input type="number" [(ngModel)]="quantity" id="quantity" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+        <button (click)="updateShop()" class="btn btn-primary" type="submit">Update Price</button>
       </div>
       <br>
       Material:
@@ -32,8 +32,8 @@
     </div>
     <div class="col">
       <h2>Price</h2>
-      <p id="price" style="font-size: xxx-large">$19.99</p>
-      <button type="button" class="btn btn-dark">Add to Cart</button>
+      <input [(ngModel)]="price" style="font-size: xxx-large" readonly>
+      <button type="button" (click)="addToCart()" class="btn btn-dark">Add to Cart</button>
     </div>
   </div>
 </div>

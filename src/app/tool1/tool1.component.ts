@@ -10,19 +10,26 @@ import {ShoppingCartService} from "../shopping-cart.service";
 export class Tool1Component implements OnInit {
 
   quantity = 1;
-  price = 0;
+  price = 10.99;
+
   constructor(private shoppingcartservice: ShoppingCartService) { }
 
   ngOnInit(): void {
   }
 
 
-  PriceChange() {
+  addToCart() {
     alert("working");
     alert(this.price);
-    let cart = {item: "tool1", price: this.price, quantity: this.quantity};
+    let cart = {item: "Box Tool", price: this.price, quantity: this.quantity};
     this.shoppingcartservice.addItem(cart);
 
+  }
+  updateShop() {
+    let p = 10.99;
+    let q = this.quantity;
+    let price = p*q;
+    this.price = price;
   }
 }
 

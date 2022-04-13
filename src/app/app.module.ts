@@ -18,6 +18,8 @@ import { Tool8Component } from './tool8/tool8.component';
 import { Tool9Component } from './tool9/tool9.component';
 import { Tool10Component } from './tool10/tool10.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { HomeComponent } from './home/home.component';
     Tool8Component,
     Tool9Component,
     Tool10Component,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    ShoppingcartComponent
   ],
   imports: [
     BrowserModule,
