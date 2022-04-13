@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from "@angular/router";
+import {ShoppingCartService} from "../shopping-cart.service";
 
 @Component({
   selector: 'app-tool1',
@@ -8,8 +9,9 @@ import { Router} from "@angular/router";
 })
 export class Tool1Component implements OnInit {
 
-
-  constructor() { }
+  quantity = 1;
+  price = 0;
+  constructor(private shoppingcartservice: ShoppingCartService) { }
 
   ngOnInit(): void {
   }
@@ -17,10 +19,10 @@ export class Tool1Component implements OnInit {
 
   PriceChange() {
     alert("working");
-    let x = document.getElementById("quantity");
+    alert(this.price);
+    let cart = {item: "tool1", price: this.price, quantity: this.quantity};
+    this.shoppingcartservice.addItem(cart);
 
-    let update = document.getElementById("price");
-    alert(x);
   }
 }
 

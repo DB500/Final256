@@ -17,6 +17,7 @@ import { Tool7Component } from './tool7/tool7.component';
 import { Tool8Component } from './tool8/tool8.component';
 import { Tool9Component } from './tool9/tool9.component';
 import { Tool10Component } from './tool10/tool10.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { Tool10Component } from './tool10/tool10.component';
     Tool7Component,
     Tool8Component,
     Tool9Component,
-    Tool10Component
+    Tool10Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

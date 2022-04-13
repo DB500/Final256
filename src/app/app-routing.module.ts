@@ -12,6 +12,7 @@ import {Tool7Component} from "./tool7/tool7.component";
 import {Tool8Component} from "./tool8/tool8.component";
 import {Tool9Component} from "./tool9/tool9.component";
 import {Tool10Component} from "./tool10/tool10.component";
+import {HomeComponent} from "./home/home.component";
 
 
 export const routes: Routes = [
@@ -26,8 +27,8 @@ export const routes: Routes = [
   {path: 'tool7', component: Tool7Component},
   {path: 'tool8', component: Tool8Component},
   {path: 'tool9', component: Tool9Component},
-  {path: 'tool10', component: Tool10Component}
-
+  {path: 'tool10', component: Tool10Component},
+  {path: '', component: HomeComponent}
 
 ];
 
