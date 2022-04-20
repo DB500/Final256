@@ -15,9 +15,7 @@ export class Tool3Component implements OnInit {
   ngOnInit(): void {
   }
   addToCart() {
-    alert("working");
-    alert(this.price);
-    let cart = {item: "Box Tool", price: this.price, quantity: this.quantity};
+    let cart = {item: "Flux Capacitor", price: this.price, quantity: this.quantity};
     this.shoppingcartservice.addItem(cart);
 
   }

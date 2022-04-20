@@ -16,9 +16,7 @@ export class Tool4Component implements OnInit {
   }
 
   addToCart() {
-    alert("working");
-    alert(this.price);
-    let cart = {item: "Box Tool", price: this.price, quantity: this.quantity};
+    let cart = {item: "Lock Pick Set", price: this.price, quantity: this.quantity};
     this.shoppingcartservice.addItem(cart);
 
   }

@@ -9,13 +9,11 @@ import {CartModule} from "../cart/cart.module";
 })
 export class ShoppingcartComponent implements OnInit {
 
+  cart = this.shoppingCartService.cart;
 
-
-  constructor(private ShoppingCartService: ShoppingCartService) { }
+  constructor(private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit(): void {
   }
-  Shopping() {
 
-  }
 }
