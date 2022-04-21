@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from "@angular/router";
 import {ShoppingCartService} from "../shopping-cart.service";
+
 
 @Component({
   selector: 'app-tool1',
@@ -11,6 +11,9 @@ export class Tool1Component implements OnInit {
 
   quantity = 1;
   price = 10.99;
+  option1 = '';
+  option2 = '';
+  message = "";
 
   constructor(private shoppingcartservice: ShoppingCartService) { }
 
@@ -19,8 +22,18 @@ export class Tool1Component implements OnInit {
 
 
   addToCart() {
-    let cart = {item: "Box Tool", price: this.price, quantity: this.quantity};
-    this.shoppingcartservice.addItem(cart);
+    if(this.option1 == "Wooden Handle"){
+      let cart = {item: "Box Tool", price: this.price, quantity: this.quantity, use: this.option1}
+      this.shoppingcartservice.addItem(cart);
+    }
+    else if (this.option2 == "Fiber Glass Handle"){
+      let cart = {item: "Box Tool", price: this.price, quantity: this.quantity, use: this.option2}
+      this.shoppingcartservice.addItem(cart);
+    }
+    else if (this.option1 == "" && this.option2 == ""){
+      this.message = "You Must Select One of the Options"
+    }
+
 
   }
   updateShop() {

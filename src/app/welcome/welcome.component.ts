@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginComponent} from "../login/login.component";
+import {ContactinfoService} from "../contactinfo.service";
 
 @Component({
   selector: 'app-welcome',
@@ -8,7 +8,13 @@ import { LoginComponent} from "../login/login.component";
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() {}
+  info = this.contactinfoservice.info;
+
+  constructor(private contactinfoservice: ContactinfoService) {}
+
+  Update(){
+
+  }
 
   ngOnInit(): void {
   }

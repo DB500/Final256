@@ -38,16 +38,12 @@
   <div class="col">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Information</h5>
-        <p class="card-text">
-          First:
-          <br>
-          Last:
-          <br>
-          Email Address:
-          <br>
-          Password:
-        </p>
+        <h5 class="card-title" *ngFor="let F of info ; index as i; first as isFirst">Information</h5>
+        <p class="card-text" >First: {{F.F}} </p>
+        <p class="card-text" >Last: </p>
+        <p class="card-text" >Email: </p>
+        <p class="card-text" >User ID: </p>
+        <p class="card-text" >Password: </p>
         <button type="button" class="btn btn-primary">Update Info</button>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {ContactinfoService} from "../contactinfo.service";
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   lname = "";
   fname = "";
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private contactinfoservice: ContactinfoService) {}
   signIn() {
     if(this.userID == 'admin' && this.password == 'admin') {
       this.router.navigateByUrl('/welcome').then(r => {});
@@ -34,6 +35,8 @@ export class LoginComponent implements OnInit {
       if(this.passwordcreate.length >= 8){
         if (this.containsSpecialChars({str: this.passwordcreate})) {
           this.router.navigateByUrl('/welcome').then(r => {});
+          let info = {F: this.fname, Last: this.lname, EmailAddress: this.email1, UserID: this.email1, Password: this.passwordcreate}
+          this.contactinfoservice.addItem(info);
         }
         else {
           this.message3 = "Password must contain at least 1 special character";

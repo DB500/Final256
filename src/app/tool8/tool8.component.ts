@@ -10,6 +10,9 @@ export class Tool8Component implements OnInit {
 
   quantity = 1;
   price = 19.99;
+  option1 = "";
+  option2 = "";
+  message = "";
 
   constructor(private shoppingcartservice: ShoppingCartService) { }
 
@@ -18,8 +21,17 @@ export class Tool8Component implements OnInit {
 
 
   addToCart() {
-    let cart = {item: "Multi Tool Pen", price: this.price, quantity: this.quantity};
-    this.shoppingcartservice.addItem(cart);
+    if (this.option1 == "Aircraft Grade Aluminum") {
+      let cart = {item: "Multi Tool Pen", price: this.price, quantity: this.quantity, use: this.option1};
+      this.shoppingcartservice.addItem(cart);
+    }
+    else if (this.option2 == "Steel"){
+      let cart = {item: "Multi Tool Pen", price: this.price, quantity: this.quantity, use: this.option2};
+      this.shoppingcartservice.addItem(cart);
+    }
+    else if (this.option1 == "" && this.option2 == ""){
+      this.message = "You Must Select One of the Options"
+    }
 
   }
   updateShop() {

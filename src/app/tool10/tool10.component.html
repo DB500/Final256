@@ -24,16 +24,19 @@
       <br>
       Handle style:
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+        <input class="form-check-input" type="radio" name="flexRadioDefault" value="Electrically Safe Rubber Handle" [(ngModel)]="option1" id="flexRadioDefault1" checked>
         <label class="form-check-label" for="flexRadioDefault1">
           Electrically safe rubber
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+        <input class="form-check-input" type="radio" name="flexRadioDefault" value="Fiber Glass Wrapping" [(ngModel)]="option2" id="flexRadioDefault2" >
         <label class="form-check-label" for="flexRadioDefault2">
           Fiber Glass Wrapping
         </label>
+      </div>
+      <div class="mat-warn">
+        <p style="color: red">{{message}}</p>
       </div>
     </div>
     <div class="col">

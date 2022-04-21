@@ -10,13 +10,14 @@ export class Tool4Component implements OnInit {
 
   quantity = 1;
   price = 55.00;
+  option1 = "N/A"
   constructor(private shoppingcartservice: ShoppingCartService) { }
 
   ngOnInit(): void {
   }
 
   addToCart() {
-    let cart = {item: "Lock Pick Set", price: this.price, quantity: this.quantity};
+    let cart = {item: "Lock Pick Set", price: this.price, quantity: this.quantity, use: this.option1};
     this.shoppingcartservice.addItem(cart);
 
   }

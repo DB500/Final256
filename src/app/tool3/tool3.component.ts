@@ -10,13 +10,25 @@ export class Tool3Component implements OnInit {
 
   quantity = 1;
   price = 250.55;
+  option1 = "";
+  option2 = "";
+  message = "";
   constructor(private shoppingcartservice: ShoppingCartService) { }
 
   ngOnInit(): void {
   }
   addToCart() {
-    let cart = {item: "Flux Capacitor", price: this.price, quantity: this.quantity};
-    this.shoppingcartservice.addItem(cart);
+    if (this.option1 == "Time Travel") {
+      let cart = {item: "Flux Capacitor", price: this.price, quantity: this.quantity, use: this.option1};
+      this.shoppingcartservice.addItem(cart);
+    }
+    else if (this.option2 == "Not Time Travel"){
+      let cart = {item: "Flux Capacitor", price: this.price, quantity: this.quantity, use: this.option2};
+      this.shoppingcartservice.addItem(cart);
+    }
+    else if (this.option1 == "" && this.option2 == ""){
+      this.message = "You Must Select One of the Options"
+    }
 
   }
   updateShop() {

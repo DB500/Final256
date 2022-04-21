@@ -7,17 +7,21 @@ body {
 h1 {
   font-family: "Book Antiqua";
   color: crimson;
+  background-color: black;
 }
 h2 {
   font-family: "Book Antiqua";
   color: crimson;
+  background-color: black;
 }
 p {
   font-family: "Book Antiqua";
   color:crimson;
+  background-color: black;
 }
 footer {
   font-family: "Book Antiqua";
   font-size: large;
   color: crimson;
+  background-color: black;
 }
