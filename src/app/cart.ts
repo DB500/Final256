@@ -3,4 +3,5 @@ export interface Cart {
   price: number;
   quantity: number;
   use?: string;
+  final: number;
 }

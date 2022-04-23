@@ -14,7 +14,7 @@ export class Tool1Component implements OnInit {
   option1 = '';
   option2 = '';
   message = "";
-
+  final = this.quantity*this.price;
   constructor(private shoppingcartservice: ShoppingCartService) { }
 
   ngOnInit(): void {
@@ -23,11 +23,11 @@ export class Tool1Component implements OnInit {
 
   addToCart() {
     if(this.option1 == "Wooden Handle"){
-      let cart = {item: "Box Tool", price: this.price, quantity: this.quantity, use: this.option1}
+      let cart = {item: "Box Tool", price: 10.99, quantity: this.quantity, use: this.option1, final: this.final}
       this.shoppingcartservice.addItem(cart);
     }
     else if (this.option2 == "Fiber Glass Handle"){
-      let cart = {item: "Box Tool", price: this.price, quantity: this.quantity, use: this.option2}
+      let cart = {item: "Box Tool", price: 10.99, quantity: this.quantity, use: this.option2, final: this.final}
       this.shoppingcartservice.addItem(cart);
     }
     else if (this.option1 == "" && this.option2 == ""){

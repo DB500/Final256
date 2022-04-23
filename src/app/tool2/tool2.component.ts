@@ -13,6 +13,7 @@ export class Tool2Component implements OnInit {
   option1 = "";
   option2 = "";
   message = "";
+  final = this.quantity*this.price;
 
   constructor(private shoppingcartservice: ShoppingCartService) { }
 
@@ -21,11 +22,11 @@ export class Tool2Component implements OnInit {
 
   addToCart() {
     if (this.option1 == "Serrated Edge") {
-      let cart = {item: "Lock-wire Pliers", price: this.price, quantity: this.quantity, use: this.option1};
+      let cart = {item: "Lock-wire Pliers", price: this.price, quantity: this.quantity, use: this.option1,  final: this.final};
       this.shoppingcartservice.addItem(cart);
     }
     else if (this.option2 == "Straight Edge"){
-      let cart = {item: "Lock-wire Pliers", price: this.price, quantity: this.quantity, use: this.option2};
+      let cart = {item: "Lock-wire Pliers", price: this.price, quantity: this.quantity, use: this.option2,  final: this.final};
       this.shoppingcartservice.addItem(cart);
     }
     else if (this.option1 == "" && this.option2 == ""){

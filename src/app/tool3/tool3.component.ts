@@ -13,17 +13,19 @@ export class Tool3Component implements OnInit {
   option1 = "";
   option2 = "";
   message = "";
+  final = this.quantity*this.price;
+
   constructor(private shoppingcartservice: ShoppingCartService) { }
 
   ngOnInit(): void {
   }
   addToCart() {
     if (this.option1 == "Time Travel") {
-      let cart = {item: "Flux Capacitor", price: this.price, quantity: this.quantity, use: this.option1};
+      let cart = {item: "Flux Capacitor", price: this.price, quantity: this.quantity, use: this.option1,  final: this.final};
       this.shoppingcartservice.addItem(cart);
     }
     else if (this.option2 == "Not Time Travel"){
-      let cart = {item: "Flux Capacitor", price: this.price, quantity: this.quantity, use: this.option2};
+      let cart = {item: "Flux Capacitor", price: this.price, quantity: this.quantity, use: this.option2,  final: this.final};
       this.shoppingcartservice.addItem(cart);
     }
     else if (this.option1 == "" && this.option2 == ""){

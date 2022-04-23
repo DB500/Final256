@@ -11,6 +11,7 @@ export class Tool9Component implements OnInit {
   quantity = 1;
   price = 15.99;
   option1 = "N/A"
+  final = this.quantity*this.price;
 
   constructor(private shoppingcartservice: ShoppingCartService) { }
 
@@ -19,7 +20,7 @@ export class Tool9Component implements OnInit {
 
 
   addToCart() {
-    let cart = {item: "Multi Angle Measuring Tool", price: this.price, quantity: this.quantity, use: this.option1};
+    let cart = {item: "Multi Angle Measuring Tool", price: this.price, quantity: this.quantity, use: this.option1, final: this.final};
     this.shoppingcartservice.addItem(cart);
 
   }

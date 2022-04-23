@@ -13,6 +13,7 @@ export class Tool6Component implements OnInit {
   option1 = "";
   option2 = "";
   message = "";
+  final = this.quantity*this.price;
 
   constructor(private shoppingcartservice: ShoppingCartService) { }
 
@@ -22,11 +23,11 @@ export class Tool6Component implements OnInit {
 
   addToCart() {
     if (this.option1 == "Rubber Handle") {
-      let cart = {item: "Grabber", price: this.price, quantity: this.quantity, use: this.option1};
+      let cart = {item: "Grabber", price: this.price, quantity: this.quantity, use: this.option1,  final: this.final};
       this.shoppingcartservice.addItem(cart);
     }
     else if (this.option2 == "Fiber Glass Handle"){
-      let cart = {item: "Grabber", price: this.price, quantity: this.quantity, use: this.option2};
+      let cart = {item: "Grabber", price: this.price, quantity: this.quantity, use: this.option2,  final: this.final};
       this.shoppingcartservice.addItem(cart);
     }
     else if (this.option1 == "" && this.option2 == ""){
